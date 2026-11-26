@@ -581,3 +581,25 @@ dialog:not([open]){display:none}
 #epilogue .poster{opacity:.26;object-position:50% 75%}
 #epilogue::after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 50% 55%,rgba(5,11,30,.55),rgba(5,11,30,.15) 70%);pointer-events:none}
 #epilogue .epi-in{position:relative;z-index:2}
+/* v2: 로고 · 인사 · 깃발 노선 */
+.brand .wm{font-family:var(--sans);font-weight:700;font-size:18px;letter-spacing:-.02em}
+.brand .lg{height:24px;width:auto;display:block}
+.foot .church{display:flex;align-items:center;gap:8px;font-family:var(--sans);font-weight:700}
+.foot .church .lg{height:28px;width:auto}
+.fw{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,4vw,56px);margin-top:clamp(48px,6vw,80px);padding-top:clamp(28px,3vw,40px);border-top:1px solid var(--line)}
+.fw-k{font-size:12.5px;letter-spacing:.16em;color:var(--olive);font-weight:600;margin-bottom:12px}
+.fw blockquote{font-family:var(--serif);font-size:clamp(16.5px,1.4vw,19px);line-height:1.8;letter-spacing:-.01em;color:var(--ink-2)}
+.fw footer{display:flex;align-items:center;gap:10px;margin-top:16px;font-size:13.5px;color:var(--muted)}
+.fw footer img{width:34px;height:34px;border-radius:50%;object-fit:cover;object-position:50% 25%}
+.route{margin-top:clamp(40px,5vw,64px)}
+.route-h{font-size:12.5px;letter-spacing:.16em;color:var(--olive);font-weight:600;margin-bottom:24px}
+.route ol{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));list-style:none;position:relative}
+.route ol::before{content:"";position:absolute;left:6.25%;right:6.25%;top:9px;height:2px;background:linear-gradient(90deg,rgba(138,106,46,.35),var(--brand))}
+.route li{position:relative;text-align:center;padding-top:30px}
+.route li::before{content:"";position:absolute;top:2px;left:50%;transform:translateX(-50%);width:16px;height:16px;border-radius:50%;background:var(--paper);border:2px solid var(--olive)}
+.route li.now::before{background:var(--brand);border-color:var(--brand);box-shadow:0 0 0 6px rgba(201,162,83,.22)}
+.route b{display:block;font-family:var(--serif);font-weight:600;font-size:15px;color:var(--olive);font-variant-numeric:tabular-nums}
+.route span{display:block;font-size:14px;color:var(--ink-2);margin-top:2px;word-break:keep-all}
+.route li.now span{font-weight:700;color:var(--ink)}
+@media (max-width:900px){.fw{grid-template-columns:1fr}}
+@media (max-width:640px){.route ol{grid-template-columns:repeat(4,minmax(0,1fr));row-gap:22px}.route ol::before{display:none}.route span{font-size:13px}.brand .wm{font-size:16px}.brand .lg{height:21px}}

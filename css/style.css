@@ -603,3 +603,10 @@ dialog:not([open]){display:none}
 .route li.now span{font-weight:700;color:var(--ink)}
 @media (max-width:900px){.fw{grid-template-columns:1fr}}
 @media (max-width:640px){.route ol{grid-template-columns:repeat(4,minmax(0,1fr));row-gap:22px}.route ol::before{display:none}.route span{font-size:13px}.brand .wm{font-size:16px}.brand .lg{height:21px}}
+/* v3: 단색 로고 */
+.brand .lg{height:26px;width:auto;display:block}
+.brand .lg-k{display:none}
+.nav.solid .brand .lg-w{display:none}
+.nav.solid .brand .lg-k{display:block}
+.foot .church .lg{height:30px;width:auto}
+@media (max-width:640px){.brand .lg{height:22px}}

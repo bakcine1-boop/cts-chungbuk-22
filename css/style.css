@@ -610,3 +610,24 @@ dialog:not([open]){display:none}
 .nav.solid .brand .lg-k{display:block}
 .foot .church .lg{height:30px;width:auto}
 @media (max-width:640px){.brand .lg{height:22px}}
+/* v5: 길이 줄이기 */
+.live-two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(20px,3vw,40px);align-items:start}
+.live-two .yt{aspect-ratio:16/9}
+.live-two .chip{font-size:12.5px;padding:6px 11px}
+.live-facts{margin-top:clamp(28px,4vw,48px);border-top:1px solid var(--line);padding-top:8px}
+.live-facts .facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 32px}
+.live-facts .facts li{border-bottom:0}
+.scene{min-height:82svh}
+.scene-in{padding-top:96px}
+.scene-years{font-size:clamp(56px,8.4vw,128px)}
+.gallery .ph:nth-child(8){grid-column:auto;grid-row:auto}
+@media (max-width:860px){.live-two{grid-template-columns:1fr}.live-facts .facts{grid-template-columns:1fr}}
+@media (max-width:640px){.scene{min-height:auto}.scene-in{padding-top:140px}}
+@media (max-width:640px){
+ .line8{grid-template-columns:repeat(4,minmax(0,1fr));gap:18px 8px}
+ .line8 .pst .n{font-size:11px}
+ .line8 .pst h3{font-size:15px;margin-top:2px}
+ .line8 .pst h3 small{font-size:10.5px}
+ .line8 .pst p,.line8 .pst .yr,.line8 .pst .m{font-size:10.5px}
+ .line8 .pst.now .ph{outline-offset:2px}
+}

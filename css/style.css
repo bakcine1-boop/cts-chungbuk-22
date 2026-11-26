@@ -631,3 +631,15 @@ dialog:not([open]){display:none}
  .line8 .pst p,.line8 .pst .yr,.line8 .pst .m{font-size:10.5px}
  .line8 .pst.now .ph{outline-offset:2px}
 }
+/* v6: 투데이N 기사 줄 */
+.press{display:grid;grid-template-columns:auto minmax(0,1fr) auto;align-items:center;gap:20px;margin-top:clamp(28px,4vw,44px);padding:18px 22px;border:1px solid var(--line);border-radius:4px;background:var(--paper);transition:border-color .2s,background .2s}
+.press:hover{border-color:var(--olive)}
+.press-k{font-size:12.5px;font-weight:700;letter-spacing:.06em;color:var(--olive)}
+.press-t{font-family:var(--serif);font-size:clamp(16px,1.4vw,19px);font-weight:600;line-height:1.45}
+.press-m{font-size:13px;color:var(--muted);white-space:nowrap}
+.press-m i{font-style:normal;margin-left:6px;color:var(--olive)}
+.press + .live-facts{margin-top:20px}
+@media (max-width:640px){.press{grid-template-columns:1fr;gap:6px;padding:16px}}
+.live-facts{border-top:0;padding-top:0}
+.live-facts .lists-more{margin-top:12px}
+.live-facts .facts li{padding:14px 0}
